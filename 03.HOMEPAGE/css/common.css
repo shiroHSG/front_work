@@ -1,0 +1,8 @@
+* {
+    margin: 0 auto;
+}
+a {
+    /* 밑줄없애기 */
+    text-decoration: none;
+    color: black;
+}

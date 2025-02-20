@@ -1,0 +1,49 @@
+body {
+    width: 1000px;
+    border: 1px solid;
+}
+/* header */
+header {
+    height: 350px;
+}
+#logo {
+    float: left;
+    height: 30px;
+    margin: 5px 0;
+}
+header>form {
+    float: right;
+    margin-top: 5px;
+}
+#titleImg {
+    clear: both;
+    height: 310px;
+    width: 100%;
+}
+/* navi */
+.navi {
+    width: 1000px;
+    height: 60px;
+    background-color: rgb(255, 214, 167);
+}
+.navi a {
+    color: white;
+    display: inline-block;
+    width: 245px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+section {
+    float: left;
+    width: 650px;
+
+}
+aside {
+    float: right;
+    width: 340px;
+}
+footer {
+    clear: both;
+    background-color: rgb(255, 214, 167);
+}
