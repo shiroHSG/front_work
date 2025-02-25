@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = "func();">소문자 갯수 세기</button>
+    <div id="result"></div>
+
+    <script>
+        function func() {
+            let str = prompt("문자열을 입력하세요");
+            let count = 0;
+            for(var i=0; i<str.length; i++) {
+                if(str[i]>='a'&&str[i]<='z')
+                    count++;
+            }
+
+            var div = document.getElementById("result");
+            div.innerHTML = `입력하신 문자열의 소문자는 ${count}개 입니다.`;
+        }
+        
+
+    </script>
+</body>
+</html>
