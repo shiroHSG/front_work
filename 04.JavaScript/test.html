@@ -6,23 +6,44 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick = "func();">소문자 갯수 세기</button>
-    <div id="result"></div>
-
+    
+    <button onclick="test()">click</button>
+    <div id="test"></div>
+    <button onclick="test2()">click</button>
+    <div id="test2"></div>
+    <button onclick="test3()">click</button>
+    <div id="test3"></div>
     <script>
-        function func() {
-            let str = prompt("문자열을 입력하세요");
-            let count = 0;
-            for(var i=0; i<str.length; i++) {
-                if(str[i]>='a'&&str[i]<='z')
-                    count++;
+        function test() {
+            const div = document.getElementById('test');
+            const student = {
+                name: 'chulsu',
+                'student number': 1010,
+                'class!': 5
             }
 
-            var div = document.getElementById("result");
-            div.innerHTML = `입력하신 문자열의 소문자는 ${count}개 입니다.`;
+            for(let key in student) {
+                div.innerHTML += `${key} : ${student[key]}<br>`;
+            }
         }
-        
 
+        function test2() {
+            
+        }
+        let tjoeun1 = name => name;
+
+        let tjoeun2 = function(name, age) {
+            if(age<=50)
+                year = age+2000;
+            else
+                year = age+1900;
+            return `year: ${year}`
+        }
+
+        let arr = [2, 4, 6, 8];
+        let arr2 = arr.map(n => n*5);
+
+        console.log(arr2);
     </script>
 </body>
 </html>
