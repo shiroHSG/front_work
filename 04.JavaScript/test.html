@@ -6,44 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <button onclick="test()">click</button>
-    <div id="test"></div>
-    <button onclick="test2()">click</button>
-    <div id="test2"></div>
-    <button onclick="test3()">click</button>
-    <div id="test3"></div>
     <script>
-        function test() {
-            const div = document.getElementById('test');
-            const student = {
-                name: 'chulsu',
-                'student number': 1010,
-                'class!': 5
-            }
+        const regex = /h.t/;
+        console.log(regex.test("hat")); // true
+        console.log(regex.test("hot")); // true
+        console.log(regex.test("hit")); // true
+        console.log(regex.test("hbt")); // false
 
-            for(let key in student) {
-                div.innerHTML += `${key} : ${student[key]}<br>`;
-            }
-        }
+        const str = "Hello, world! Hello again!";
 
-        function test2() {
-            
-        }
-        let tjoeun1 = name => name;
-
-        let tjoeun2 = function(name, age) {
-            if(age<=50)
-                year = age+2000;
-            else
-                year = age+1900;
-            return `year: ${year}`
-        }
-
-        let arr = [2, 4, 6, 8];
-        let arr2 = arr.map(n => n*5);
-
-        console.log(arr2);
+        console.log(str.replace(/hello/gi, "Hi"));
     </script>
 </body>
 </html>
