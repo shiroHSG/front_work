@@ -6,16 +6,27 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>회원가입</h1>
+    <form action="test.do">
+        <label for="userPW">* 비밀번호 : </label>
+        <input type="text" id="userPW" name="userPW"><br>
+        영문자, 숫자, 특수문자로 총 8~15자로 입력하시오.<br>
+        <button type="submit" onclick="return infoCheck();">회원가입</button>
+        <button type="reset">취소</button>
+    </form>
+
+
     <script>
-        const regex = /h.t/;
-        console.log(regex.test("hat")); // true
-        console.log(regex.test("hot")); // true
-        console.log(regex.test("hit")); // true
-        console.log(regex.test("hbt")); // false
+        function infoCheck(){
+            let userPW=document.getElementById("userPW").value;
 
-        const str = "Hello, world! Hello again!";
+            regExp=/^\w{7,15}$/;
+            if(!(regExp.test(userPW))){
+                window.alert("비밀번호는 영문자, 숫자, 특수문자로 총 8~15자로 입력하시오.");
+                return false;
+            }
 
-        console.log(str.replace(/hello/gi, "Hi"));
+        }
     </script>
 </body>
 </html>
